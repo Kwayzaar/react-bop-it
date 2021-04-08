@@ -29,14 +29,14 @@ class App extends Component {
   render(){
     return (
       <div className="App" style={{ backgroundImage: `url(${this.state.correct ? boom : background})`,
-      backgroundRepeat: "repeat" }}>
+      backgroundRepeat: "repeat" }}> 
         <Labels/>
         <BopIt />
-        <Twister />
-        <Puller />
-        <Flicker />
+        <Twister scrollIt={this.toggleCorrect} />
+        <Puller dragIt={this.toggleCorrect} />
+        <Flicker mouseIt={this.toggleCorrect} />
         <Spinner />
-        <Bopper />
+        <Bopper clickIt={this.toggleCorrect} />
         
       </div>
     );
